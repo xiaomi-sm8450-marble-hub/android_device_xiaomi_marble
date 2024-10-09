@@ -7,14 +7,14 @@
 # Inherit from marble device
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
-# Inherit from common EverestOS configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common DerpOS configuration
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Device identifier
 PRODUCT_BRAND := POCO
 PRODUCT_DEVICE := marble
 PRODUCT_MODEL := 23049PCD8G
-PRODUCT_NAME := lineage_marble
+PRODUCT_NAME := derp_marble
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_SYSTEM_NAME := marble_global
@@ -29,17 +29,12 @@ BUILD_FINGERPRINT := POCO/marble_global/marble:14/UKQ1.230804.001/V816.0.8.0.UMR
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# EverestOS stuff
+# DerpOS stuff
 TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_SUPPORTS_BLUR := true
 TARGET_DISABLE_EPPE := true
 TARGET_HAS_UDFPS := false
-WITH_GAPPS := true
+WITH_GMS := true
 
-# Quick switch (add more than one Launcher in build)
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
-TARGET_DEFAULT_PIXEL_LAUNCHER := true
-
-# EverestOS Maintainer stuff
-EVEREST_MAINTAINER := SharmagRit
-EVEREST_BUILD_TYPE := OFFICIAL
+# DerpOS build
+DERP_BUILDTYPE := Un
